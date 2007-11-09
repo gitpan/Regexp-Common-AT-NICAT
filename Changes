@@ -1,0 +1,10 @@
+---
+global:
+  name: Regexp-Common-AT-NICAT
+releases:
+  - author: 'Marcel Gruenauer <marcel@cpan.org>'
+    changes:
+      - original version
+    date: 2007-11-09T11:24:49Z
+    tags: []
+    version: 0.01
