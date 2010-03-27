@@ -1,28 +1,61 @@
-This is the Perl module Regexp::Common::AT::NICAT.
+NAME
+    Regexp::Common::AT::NICAT - Defines patterns for nic.at person handles
+
+VERSION
+    version 1.100860
+
+SYNOPSIS
+        use Regexp::Common 'AT::NICAT';
+
+        my $value = '...';
+        if ($value =~ /$RE{at}{nicathandle}/) {
+           #  ...
+        }
+
+DESCRIPTION
+    This module defines patterns for nic.at (Austrian domain registry)
+    person handles to be used with Regexp::Common.
+
+    Please consult the manual of Regexp::Common for a general description of
+    the works of this interface. Do not use this module directly, but load
+    it via *Regexp::Common*.
+
+PATTERNS
+    At the moment there is only one pattern, but more patterns for .at
+    domain names will follow - they have some restrictions on length and
+    characters to be used.
+
+    $RE{at}{nicathandle}
+        Provides a regex to match nic.at person handles.
 
 INSTALLATION
+    See perlmodinstall for information and options on installing Perl
+    modules.
 
-Regexp::Common::AT::NICAT installation is straightforward. If your CPAN
-shell is set up, you should just be able to do
+BUGS AND LIMITATIONS
+    No bugs have been reported.
 
-    % cpan Regexp::Common::AT::NICAT
+    Please report any bugs or feature requests through the web interface at
+    <http://rt.cpan.org/Public/Dist/Display.html?Name=Regexp-Common-AT-NICAT
+    >.
 
-Download it, unpack it, then build it as per the usual:
+AVAILABILITY
+    The latest version of this module is available from the Comprehensive
+    Perl Archive Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a
+    CPAN site near you, or see
+    <http://search.cpan.org/dist/Regexp-Common-AT-NICAT/>.
 
-    % perl Makefile.PL
-    % make && make test
+    The development version lives at
+    <http://github.com/hanekomu/Regexp-Common-AT-NICAT/>. Instead of sending
+    patches, please fork this project using the standard git and github
+    infrastructure.
 
-Then install it:
+AUTHOR
+      Marcel Gruenauer <marcel@cpan.org>
 
-    % make install
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2007 by Marcel Gruenauer.
 
-DOCUMENTATION
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 
-Regexp::Common::AT::NICAT documentation is available as in POD. So you
-can do:
-
-    % perldoc Regexp::Common::AT::NICAT
-
-to read the documentation online with your favorite pager.
-
-Marcel Gruenauer

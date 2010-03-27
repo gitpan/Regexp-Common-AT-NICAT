@@ -1,12 +1,44 @@
-use inc::Module::Install;
-name 'Regexp-Common-AT-NICAT';
-all_from 'lib/Regexp/Common/AT/NICAT.pm';
-perl_version '5.006';
 
-requires 'Regexp::Common';
+use strict;
+use warnings;
 
-build_requires 'Test::More' => '0.70';
+ BEGIN { require 5.008; } 
 
-use_standard_tests(without => 'pod_coverage');
-auto_include;
-WriteAll;
+use ExtUtils::MakeMaker 6.11;
+
+
+
+my %WriteMakefileArgs = (
+                       'test' => {
+                                   'TESTS' => 't/*.t'
+                                 },
+                       'NAME' => 'Regexp::Common::AT::NICAT',
+                       'DISTNAME' => 'Regexp-Common-AT-NICAT',
+                       'CONFIGURE_REQUIRES' => {
+                                                 'ExtUtils::MakeMaker' => '6.11'
+                                               },
+                       'AUTHOR' => 'Marcel Gruenauer <marcel@cpan.org>',
+                       'BUILD_REQUIRES' => {},
+                       'ABSTRACT' => 'Defines patterns for nic.at person handles',
+                       'EXE_FILES' => [],
+                       'VERSION' => '1.100860',
+                       'PREREQ_PM' => {
+                                        'Test::More' => '0.88',
+                                        'Scalar::Util' => '0',
+                                        'Regexp::Common' => '0',
+                                        'English' => '0',
+                                        'File::Find' => '0',
+                                        'File::Temp' => '0',
+                                        'Carp' => '0'
+                                      },
+                       'LICENSE' => 'perl'
+                     );
+
+
+delete $WriteMakefileArgs{LICENSE}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.31) };
+
+WriteMakefile(%WriteMakefileArgs);
+
+
+

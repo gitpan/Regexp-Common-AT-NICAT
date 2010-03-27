@@ -1,0 +1,40 @@
+{
+   "resources" : {
+      "homepage" : "http://search.cpan.org/dist/Regexp-Common-AT-NICAT/",
+      "repository" : "http://github.com/hanekomu/Regexp-Common-AT-NICAT",
+      "bugtracker" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Regexp-Common-AT-NICAT"
+   },
+   "generated_by" : "Dist::Zilla version 1.100711",
+   "meta-spec" : {
+      "version" : 1.4,
+      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
+   },
+   "version" : "1.100860",
+   "name" : "Regexp-Common-AT-NICAT",
+   "author" : [
+      "Marcel Gruenauer <marcel@cpan.org>"
+   ],
+   "license" : "perl",
+   "build_requires" : {},
+   "provides" : {
+      "Regexp::Common::AT::NICAT" : {
+         "version" : "1.100860",
+         "file" : "lib/Regexp/Common/AT/NICAT.pm"
+      }
+   },
+   "requires" : {
+      "perl" : "5.008",
+      "Test::More" : "0.88",
+      "Scalar::Util" : "0",
+      "Regexp::Common" : "0",
+      "English" : "0",
+      "File::Find" : "0",
+      "File::Temp" : "0",
+      "Carp" : "0"
+   },
+   "abstract" : "Defines patterns for nic.at person handles",
+   "configure_requires" : {
+      "ExtUtils::MakeMaker" : "6.11"
+   }
+}
+
